@@ -24,8 +24,8 @@
             <td class="columnCenter" *ngIf="alumno.isPresent"><i class="fa fa-check fa-lg" aria-hidden="true" title="Sí"></i></td>
             <td class="columnCenter" *ngIf="!alumno.isPresent"><i class="fa fa-close fa-lg" aria-hidden="true" title="No"> </i></td>
             <td class="columnCenter">
-              <button (click)="alumno.Present()" class="btn btn-dark rounded-circle btnYes">Sí</button> 
-              <button (click)="alumno.Absent()" class="btn btn-secondary rounded-circle">No</button>
+              <button (click)="alumno.Present(true)" class="btn btn-dark rounded-circle btnYes">Sí</button> 
+              <button (click)="alumno.Present(false)" class="btn btn-secondary rounded-circle">No</button>
             </td>
           </tr>
         </tbody>

@@ -8,11 +8,7 @@ export class Alumno {
     public isPresent: boolean  
     ) {}
 
-    Present(){
-        this.isPresent = true;
-    }
-
-    Absent(){
-        this.isPresent = false;
+    Present(v:boolean){
+        this.isPresent = v;
     }
 }
