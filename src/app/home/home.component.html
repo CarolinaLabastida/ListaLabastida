@@ -1,0 +1,33 @@
+<div class="container-fluid">
+    <table class="table">
+        <thead class="table-dark">
+          <tr>
+            <td>Id</td>
+            <td>Nombre completo</td>
+            <td>Promedio</td>
+            <td>Edad</td>
+            <td>Fecha de nacimiento</td>
+            <td class="columnCenter">Presente</td>
+            <td class="columnCenter">Asistencia</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let alumno of alumnos" [ngClass]="alumno.grade > 5 ? 'table-success' : 'table-danger'"
+            [ngStyle]="{
+              'color': !alumno.isPresent ? '#a7a3a3' : ''
+            }">
+            <td>{{alumno.id}}</td>
+            <td>{{alumno.fullName}}</td>
+            <td>{{alumno.grade | number: '1.0-1'}}</td>
+            <td>{{alumno.age}}</td>
+            <td>{{alumno.birthdate | date : 'MM/dd/yyyy'}}</td>
+            <td class="columnCenter" *ngIf="alumno.isPresent"><i class="fa fa-check fa-lg" aria-hidden="true" title="Sí"></i></td>
+            <td class="columnCenter" *ngIf="!alumno.isPresent"><i class="fa fa-close fa-lg" aria-hidden="true" title="No"> </i></td>
+            <td class="columnCenter">
+              <button (click)="alumno.Present()" class="btn btn-dark rounded-circle btnYes">Sí</button> 
+              <button (click)="alumno.Absent()" class="btn btn-secondary rounded-circle">No</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>

@@ -1,0 +1,19 @@
+aside{
+    width: var(--sidebar-width);
+    height: calc(100vh - var(--toolbar-height));
+    position: fixed;
+    background-color: #dae3f4;
+}
+
+.admin-sidenav {
+margin-left: 0px; 
+padding-top: 20px;
+}
+
+.admin-sidenav li {
+text-align: justify;
+padding: 15px;
+padding-left: 1rem;
+}
+
+

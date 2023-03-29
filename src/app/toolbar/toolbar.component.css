@@ -1,0 +1,12 @@
+header{
+    height: var(--toolbar-height);
+    background-color: #0b7bde;
+}
+
+p{
+    color: aliceblue;
+    font-size: 16px;
+    padding: 20px;
+    text-transform: uppercase;
+}
+
